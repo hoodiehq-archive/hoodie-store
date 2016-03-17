@@ -1,0 +1,31 @@
+{
+  "name": "@hoodie/store",
+  "version": "0.0.0-semantically-released",
+  "description": "Hoodie's Store API",
+  "main": "server/index.js",
+  "browser": "client/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hoodiehq/hoodie-store.git"
+  },
+  "keywords": [
+    "hoodie",
+     "offlinefirst",
+     "storage",
+     "sync",
+     "data"
+  ],
+  "author": "The Hoodie Community and other contributors | http://hood.ie/",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/hoodiehq/hoodie-store/issues"
+  },
+  "homepage": "https://github.com/hoodiehq/hoodie-store#readme",
+  "dependencies": {
+    "hoodie-client-store": "^4.1.0",
+    "hoodie-server-store": "^1.1.0"
+  }
+}
