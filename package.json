@@ -5,7 +5,7 @@
   "main": "server/index.js",
   "browser": "client/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "standard",
     "build": "browserify -s Store client/index.js > public/client.js",
     "start": "node example.js"
   },
@@ -34,6 +34,7 @@
     "browserify": "^13.0.0",
     "inert": "^3.2.0",
     "memdown": "^1.1.2",
-    "pouchdb": "^5.3.0"
+    "pouchdb": "^5.3.0",
+    "standard": "^6.0.8"
   }
 }
