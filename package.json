@@ -15,10 +15,10 @@
   },
   "keywords": [
     "hoodie",
-     "offlinefirst",
-     "storage",
-     "sync",
-     "data"
+    "offlinefirst",
+    "storage",
+    "sync",
+    "data"
   ],
   "author": "The Hoodie Community and other contributors | http://hood.ie/",
   "license": "Apache-2.0",
