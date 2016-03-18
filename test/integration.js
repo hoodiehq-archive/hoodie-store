@@ -118,6 +118,24 @@ describe('hoodie.store', function () {
     })
   })
 
+  it('.update() updates existing object', function () {
+    return this.client
+
+    .executeAsync(function (done) {
+      hoodie.store.add({id: '788'})
+
+      .then(function () {
+        return hoodie.store.update('788', {foo: 'bar'})
+      })
+
+      .then(done, done)
+    }).then(toValue)
+    .then(function (object) {
+      expect(object.id).to.equal('788')
+      expect(object.foo).to.equal('bar')
+    })
+  })
+
   it('.updateOrAdd() updates existing object', function () {
     return this.client
 
