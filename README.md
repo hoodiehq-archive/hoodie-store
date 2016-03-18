@@ -12,12 +12,7 @@
 ## Example
 
 
-Create the `client.js` bundle first
-```
-npm run build
-```
-
-Then run the server:
+Run the server:
 ```
 npm start
 ```
