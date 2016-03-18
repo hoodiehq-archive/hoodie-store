@@ -34,6 +34,7 @@
     "@gr2m/frontend-test-setup": "^1.2.1",
     "browserify": "^13.0.0",
     "chai": "^3.5.0",
+    "hapi": "^13.2.1",
     "humble-localstorage": "^1.4.2",
     "inert": "^3.2.0",
     "memdown": "^1.1.2",
