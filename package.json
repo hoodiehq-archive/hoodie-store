@@ -5,7 +5,8 @@
   "main": "server/index.js",
   "browser": "client/index.js",
   "scripts": {
-    "test": "standard",
+    "pretest": "standard",
+    "test": "frontend-test-background mocha test/*.js",
     "start": "node example/"
   },
   "repository": {
@@ -30,12 +31,22 @@
     "hoodie-server-store": "^1.1.0"
   },
   "devDependencies": {
+    "@gr2m/frontend-test-setup": "^1.2.1",
     "browserify": "^13.0.0",
+    "chai": "^3.5.0",
     "humble-localstorage": "^1.4.2",
     "inert": "^3.2.0",
     "memdown": "^1.1.2",
+    "mocha": "^2.4.5",
     "pouchdb": "^5.3.0",
     "random-string": "^0.1.2",
     "standard": "^6.0.8"
+  },
+  "frontend-test-setup": {
+    "server": {
+      "cmd": "npm start",
+      "host": "127.0.0.1",
+      "port": 4663
+    }
   }
 }
