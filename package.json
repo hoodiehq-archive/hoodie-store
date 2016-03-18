@@ -6,7 +6,6 @@
   "browser": "client/index.js",
   "scripts": {
     "test": "standard",
-    "build": "browserify -s Store client/index.js > public/client.js",
     "start": "node example.js"
   },
   "repository": {
