@@ -4,13 +4,13 @@ var memdown = require('memdown')
 var inert = require('inert')
 var path = require('path')
 var EventEmitter = require('events').EventEmitter
-var hapiStore = require('./server')
+var hapiStore = require('../server')
 
 var browserify = require('browserify')([], {
-  standalone: 'Store'
+  standalone: 'hoodie'
 })
 
-browserify.require(path.join(__dirname, 'client', 'index.js'))
+browserify.require(path.join(__dirname, 'client.js'))
 
 var bundleEE = new EventEmitter()
 var STOREJS = null
@@ -29,7 +29,7 @@ server.connection({
 
 server.route({
   method: 'GET',
-  path: '/client.js',
+  path: '/hoodie/client.js',
   handler: function (request, reply) {
     if (!STOREJS) {
       return bundleEE.once('done', function (error, buffer) {
@@ -57,7 +57,7 @@ server.register({
     method: 'GET',
     path: '/',
     handler: function (request, reply) {
-      reply.file(path.join(__dirname, 'public', 'index.html'))
+      reply.file(path.join(__dirname, '..', 'public', 'index.html'))
     }
   })
 })

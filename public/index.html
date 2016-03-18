@@ -2,15 +2,14 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <script src="/client.js"></script>
+    <script src="/hoodie/client.js"></script>
+    <title>hoodie store</title>
     <script>
-    window.hoodie = {
-      store: Store.defaults({remoteBaseUrl: '/hoodie/store/api' })('mydb')
+    if (hoodie) {
+      document.write('hoodie.store is loaded in this document.')
     }
     </script>
-    <title></title>
   </head>
   <body>
-    hoodie.store is loaded in this document.
   </body>
 </html>
