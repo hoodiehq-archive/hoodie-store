@@ -218,4 +218,52 @@ describe('hoodie.store', function () {
       expect(foos[1]).to.equal('baz')
     })
   })
+
+  it('.updateAll()', function () {
+    return this.client
+      .executeAsync(function (done) {
+        hoodie.store.removeAll()
+          .then(function () {
+            hoodie.store.add([
+              {a: 1},
+              {b: 2}
+            ])
+          })
+          .then(function () {
+            return hoodie.store.updateAll({cool: 'yes'})
+          })
+          .then(done, done)
+      })
+      .then(toValue)
+      .then(function (objects) {
+        expect(objects.length).to.equal(2)
+        expect(objects[0].cool).to.equal('yes')
+        expect(objects[1].cool).to.equal('yes')
+      })
+  })
+
+  it('.hasLocalChanges()', function () {
+    return this.client
+      .executeAsync(function (done) {
+        var hadChanges = [hoodie.store.hasLocalChanges()]
+
+        hoodie.store.add([
+          {id: 'test1', foo: 'bar1'},
+          {id: 'test2', foo: 'bar2'}
+        ])
+        .then(function () {
+          hadChanges.push(hoodie.store.hasLocalChanges())
+          return hoodie.store.sync()
+        })
+        .then(function () {
+          hadChanges.push(hoodie.store.hasLocalChanges())
+          done(hadChanges)
+        })
+      })
+      .then(toValue)
+      .then(function (hadChanges) {
+        expect(hadChanges.length).to.equal(3)
+        expect(hadChanges).to.eql([false, true, false])
+      })
+  })
 })
