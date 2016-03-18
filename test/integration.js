@@ -50,6 +50,28 @@ describe('hoodie.store', function () {
     })
   })
 
+  it('.isConnected()', function () {
+    return this.client
+    .executeAsync(function (done) {
+      var connectedList = [hoodie.store.isConnected()]
+      hoodie.store.connect()
+        .then(function () {
+          connectedList.push(hoodie.store.isConnected())
+        })
+        .then(function () {
+          return hoodie.store.disconnect()
+        })
+        .then(function () {
+          connectedList.push(hoodie.store.isConnected())
+          done(connectedList)
+        })
+    })
+    .then(toValue)
+    .then(function (connectedList) {
+      expect(connectedList).to.eql([false, true, false])
+    })
+  })
+
   it('.add() generates uuid', function () {
     return this.client
 
