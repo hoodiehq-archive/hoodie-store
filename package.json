@@ -1,17 +1,17 @@
 {
   "name": "@hoodie/store",
-  "version": "0.0.0-semantically-released",
   "description": "Hoodie's Store API",
   "main": "server/index.js",
   "browser": "client/index.js",
   "scripts": {
     "pretest": "standard",
     "test": "frontend-test-background mocha test/*.js",
-    "start": "node example/"
+    "start": "node example/",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hoodiehq/hoodie-store.git"
+    "url": "https://github.com/hoodiehq/hoodie-store.git"
   },
   "keywords": [
     "hoodie",
@@ -41,7 +41,8 @@
     "mocha": "^2.4.5",
     "pouchdb": "^5.3.0",
     "random-string": "^0.1.2",
-    "standard": "^6.0.8"
+    "standard": "^6.0.8",
+    "semantic-release": "^6.2.1"
   },
   "frontend-test-setup": {
     "server": {
