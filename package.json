@@ -30,8 +30,8 @@
   },
   "homepage": "https://github.com/hoodiehq/hoodie-store#readme",
   "dependencies": {
-    "hoodie-client-store": "^4.1.0",
-    "hoodie-server-store": "^1.1.0"
+    "@hoodie/store-client": "^5.0.0",
+    "@hoodie/store-server": "^2.0.0"
   },
   "devDependencies": {
     "@gr2m/frontend-test-setup": "^1.2.1",
