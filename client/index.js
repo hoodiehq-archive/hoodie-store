@@ -1,1 +1,1 @@
-module.exports = require('hoodie-client-store')
+module.exports = require('@hoodie/store-client')
