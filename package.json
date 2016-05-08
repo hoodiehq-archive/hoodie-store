@@ -1,6 +1,6 @@
 {
   "name": "@hoodie/store",
-  "description": "Hoodie's Store API",
+  "description": "Hoodie Store core module",
   "main": "server/index.js",
   "browser": "client/index.js",
   "scripts": {
