@@ -17,7 +17,7 @@ function toValue (result) {
 }
 
 function isError (value) {
-  return value && value.error === true
+  return value && value.status
 }
 
 describe('hoodie.store', function () {
