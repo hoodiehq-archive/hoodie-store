@@ -130,7 +130,7 @@ describe('hoodie.store', function () {
       .then(done, done)
     }).then(toValue)
     .then(function () {
-      throw new Error('should reject with Conflict error')
+      Promise.reject(Error('should reject with Conflict error'))
     })
     .catch(function (error) {
       expect(error.status).to.equal(409)
@@ -202,7 +202,7 @@ describe('hoodie.store', function () {
       .then(done, done)
     }).then(toValue)
     .then(function () {
-      throw new Error('should reject with Not Found error')
+      Promise.reject(Error('should reject with Not Found error'))
     })
     .catch(function (error) {
       expect(error.status).to.equal(404)
