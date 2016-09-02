@@ -31,7 +31,7 @@
   },
   "homepage": "https://github.com/hoodiehq/hoodie-store#readme",
   "dependencies": {
-    "@hoodie/store-client": "^5.0.2",
+    "@hoodie/store-client": "^5.0.7",
     "@hoodie/store-server": "^2.0.0"
   },
   "devDependencies": {
