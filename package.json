@@ -32,7 +32,7 @@
   "homepage": "https://github.com/hoodiehq/hoodie-store#readme",
   "dependencies": {
     "@hoodie/store-client": "^5.0.2",
-    "@hoodie/store-server": "^2.0.0"
+    "@hoodie/store-server": "^2.1.1"
   },
   "devDependencies": {
     "@gr2m/frontend-test-setup": "^1.2.1",
