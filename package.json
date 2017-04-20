@@ -42,7 +42,7 @@
     "hapi": "^15.0.1",
     "humble-localstorage": "^1.4.2",
     "inert": "^4.0.0",
-    "memdown": "^1.1.2",
+    "memdown": "^1.2.2",
     "mocha": "^3.0.0",
     "pouchdb": "^6.0.4",
     "random-string": "^0.1.2",
