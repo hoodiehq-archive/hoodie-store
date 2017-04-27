@@ -19,7 +19,7 @@ npm start
 ```
 
 If you want to use the store module as plugin of your [Hapi](http://hapijs.com/)
-server, check out [example/index.js](exmaple/index.js) to see how to register
+server, check out [example/index.js](example/index.js) to see how to register
 the [store-server](https://github.com/hoodiehq/hoodie-store-server) and how
 to bundle and server the [store-client](https://github.com/hoodiehq/hoodie-store-client)
 
